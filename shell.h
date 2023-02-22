@@ -370,5 +370,6 @@ extern char **environ;
 
 void exitt(char **arv);
 void env(char **arv);
+void freearv(char **arv);
 
 #endif
