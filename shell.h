@@ -371,5 +371,6 @@ extern char **environ;
 void exitt(char **arv);
 void env(char **arv);
 void freearv(char **arv);
+char *concat_all(char *name, char *sep, char *value);
 
 #endif
