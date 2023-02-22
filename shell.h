@@ -360,17 +360,4 @@ int replace_vars(info_t *);
 
 int replace_string(char **, char *);
 
-typedef struct mybuild
-{
-	char *name;
-	void (*func)(char **);
-} mybuild;
-
-extern char **environ;
-
-void exitt(char **arv);
-void env(char **arv);
-void freearv(char **arv);
-char *concat_all(char *name, char *sep, char *value);
-
 #endif
