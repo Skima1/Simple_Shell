@@ -59,7 +59,6 @@
 extern char **environ;
 
 /**
- *
  * struct liststr - singly linked list
  *
  * @num: the number field
@@ -79,7 +78,6 @@ typedef struct liststr
 } list_t;
 
 /**
- *
  * struct passinfo - contains pseudo-arguements to pass into a function,
  *
  * allowing uniform prototype for function pointer struct
@@ -146,9 +144,9 @@ typedef struct passinfo
 
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-	0, 0,0}
+	0, 0, 0}
 
-/*
+ /*
  *
  * struct builtin - contains a builtin string and related function
  * @type: the builtin command flag
@@ -156,7 +154,6 @@ typedef struct passinfo
  */
 
 typedef struct builtin
-
 {
 	char *type;
 	int (*func)(info_t *);
