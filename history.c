@@ -63,7 +63,7 @@ int write_history(info_t *info)
  *	Return: histcount on success, 0 otherwise
  */
 int read_history(info_t *info)
-	{
+{
 		int i, last = 0, linecount = 0;
 
 		ssize_t fd, rdlen, fsize = 0;
@@ -106,7 +106,7 @@ int read_history(info_t *info)
 			delete_node_at_index(&(info->history), 0);
 		renumber_history(info);
 		return (info->histcount);
-	}
+}
 
 /**
  *	build_history_list - adds entry to a history linked list
