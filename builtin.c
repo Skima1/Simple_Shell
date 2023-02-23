@@ -34,10 +34,8 @@ int _myexit(info_t *info)
 /**
  * _mycd - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
- * constant function prototype.
  * Return: Always 0
  */
-
 int _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
@@ -49,7 +47,6 @@ int _mycd(info_t *info)
 	if (!info->argv[1])
 	{
 		dir = _getenv(info, "HOME=");
-
 		if (!dir)
 			chdir_ret = /* TODO: what should this be? */
 				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
@@ -70,7 +67,6 @@ int _mycd(info_t *info)
 	}
 	else
 		chdir_ret = chdir(info->argv[1]);
-
 	if (chdir_ret == -1)
 	{
 		print_error(info, "can't cd to ");
